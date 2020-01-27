@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Domine&display=swap');
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Regular.eot');
+    src: url('../fonts/Helvetica-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+ font-size: 10px;
+}
+
+body {
+    background: #e5e5e5;
+    font: 1.6rem 'Open Sans';
+    color: #333332;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1170px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.4);
+    margin: 80px auto;
+}
+
+.centered {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h2 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.8rem;
+    transition: color .2s ease-out;
+}
+
+.header-content h2:hover {
+    color: #000000;
+}
+
+.header-content .subheading {
+    color: rgba(0, 0, 0, 0.8);
+    font: 1.2rem 'Helvectica';
+}
+
+.header-content nav {
+    width: 50%;
+}
+
+.header-content .topmenu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: rgba(69, 69, 69, 0.8);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.header-content .topmenu li {
+    transition: color .2s ease-out;
+}
+
+.header-content .topmenu li:hover, .header-content .topmenu li.active {
+    color: #000000;
+}
+
+.slider {
+    height: 400px;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.slider .headings-container {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.slider .headings-container h1 {
+    font: 4rem 'Domine';
+    color: #ffffff;
+    text-shadow: 0px 2px 25px rgba(0, 0, 0, 0.3);
+}
+
+.slider .headings-container .subheading {
+    font: 2.4rem 'Helvectica';
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    transition: color .2s ease-out; 
+    cursor: pointer;   
+}
+
+.slider .headings-container .subheading:hover {
+    color: #ffffff;
+}
+
+main {
+    background: #ffffff;
+    line-height: 3.8rem;
+    padding: 60px;
+}
+
+main .text-bold {
+    font-weight: 700;
+}
+
+main p {
+    margin-bottom: 3.8rem;
+}
+
+main figcaption {
+    color: #ababab;
+    font: 1.4rem 'Arial';
+    line-height: 2.6rem;
+    margin: 30px 0;
+    text-align: center;
+}
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+footer .copyright {
+    color: #a6a6a6;
+    font-size: 1.3rem;
+    padding: 25px 0;
+}
+
+footer .copyright .lightgrey {
+    color: #dadada;
+}
+
+footer .socials {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px 0;
+}
+
+footer .socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    opacity: 0.9;
+    color: #dadada;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    transition: opacity .2s;
+}
+
+footer .socials a i {
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+footer .socials a.twitter {
+    background: #00b0ef;
+}
+
+footer .socials a.behance {
+    background: #0066ff;
+}
+footer .socials a.dropbox {
+    background: #0083d1;
+}
+footer .socials a.fb {
+    background: #265999;
+}
+footer .socials a.rss {
+    background: #ff7600;
+}
+
+footer .socials a:hover {
+    opacity: 1;
+}
