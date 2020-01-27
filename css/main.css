@@ -49,6 +49,7 @@ img {
 
 header {
     padding: 30px 0;
+    max-height: 106px;
 }
 
 .header-content {
@@ -92,6 +93,24 @@ header {
 
 .header-content .topmenu li:hover, .header-content .topmenu li.active {
     color: #000000;
+}
+
+.header-content .burger-menu {
+    display: none;
+    width: 55px;
+    height: 55px;
+    border: 2px solid rgba(69, 69, 69, 0.8);
+}
+
+.header-content .burger-menu div {
+    width: 40px;
+    height: 3px;
+    background: rgba(69, 69, 69, 0.8);
+    transition: background .2s ease-out;
+}
+
+.header-content .burger-menu div+div {
+    margin-top: 5px;
 }
 
 .slider {
@@ -138,15 +157,15 @@ main {
     padding: 60px;
 }
 
-main .text-bold {
+main .text-container .text-bold {
     font-weight: 700;
 }
 
-main p {
+main .text-container p {
     margin-bottom: 3.8rem;
 }
 
-main figcaption {
+main .text-container figcaption {
     color: #ababab;
     font: 1.4rem 'Arial';
     line-height: 2.6rem;
@@ -209,4 +228,134 @@ footer .socials a.rss {
 
 footer .socials a:hover {
     opacity: 1;
+}
+
+@media screen and (max-width: 1170px) {
+    .main-container {
+        margin: 0 auto;
+    }  
+}
+
+@media screen and (max-width: 810px) {
+    header {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #e5e5e5;
+        padding: 0;
+    }
+
+    header .header-content {
+        height: 105px;
+        padding: 0 15px;
+    }
+
+    .header-content .topmenu {
+        display: none;
+    }
+
+    .header-content .topmenu.opened {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        width: 100%;
+        background: #e5e5e5;
+        text-align: center;
+    }
+
+    .header-content .topmenu.opened li {
+        height: 45px;
+    }
+
+    .header-content .topmenu.opened li~li {
+        border-top: 1px solid rgba(69, 69, 69, 0.8);;
+    }
+
+    .header-content .topmenu.opened li a {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .header-content .burger-menu {
+        float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color .2s ease-out;
+    }
+
+    .header-content .burger-menu:hover, .header-content .burger-menu.opened {
+        border-color: #000000;
+    }
+
+    .header-content .burger-menu:hover div, .header-content .burger-menu.opened div {
+        background: #000000;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        line-height: 2.8rem;
+        padding: 40px;
+    }
+
+    main .text-container p {
+        margin-bottom: 2.8rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    header .header-content {
+        height: 80px;
+        padding: 0 15px;
+    }
+
+    header .header-content .subtitle {
+        display: none;
+    }
+
+    .header-content .topmenu.opened {
+        top: 80px;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slider .headings-container {
+        padding: 0 15px;
+    }
+
+    main {
+        line-height: 2.8rem;
+        padding: 20px;
+    }
+
+    footer .copyright {
+        padding: 15px;
+
+    }
+
+    footer .socials {
+        padding: 10px 0;
+    }
 }
